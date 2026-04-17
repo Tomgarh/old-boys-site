@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
 }
 /* HEADER BASE */
 .header {
@@ -8,13 +11,13 @@ body {
     color: white;
     padding: 15px 20px;
     margin-bottom: 20px;
+   
   }
   
   /* FLEX LAYOUT */
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-betwee;
     flex-wrap: wrap; /* makes it responsive */
     gap: 15px;
   }
@@ -34,7 +37,7 @@ body {
     margin: 0;
   }
   .oldboys{
-    margin-right: 350px;
+    margin-right: 300px;
 
   }
   .tagline {
@@ -67,9 +70,18 @@ body {
     border-radius: 6px;
     border: none;
     outline: none;
+    width: 90%;
   }
   .search-box{
-    margin-left: 300px;
+    margin-left: 220px;
+    justify-content: center;
+    display: flex;
+  }
+  .look{
+    background-color: white;
+    color: 1f8ec2;
+    padding: 0.3rem;
+    border-radius: 5px;
   }
   .hero {
     height: 300px;
@@ -77,7 +89,7 @@ body {
      background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 20px;
+    margin-top: -18px;
     background-position: center bottom;
 
   
@@ -117,13 +129,25 @@ body {
   gap: 10px;
   padding: 10px;
 }
+.view{
+  background-color: #1f8ec2;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
 .card {
   background: white;
   border-radius: 10px;
   padding: 15px;
+  margin: 10px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
+.card:hover {
+  transform: scale(1.03);
+}
+
 
 .card img {
   width: 100px;
@@ -153,19 +177,30 @@ body {
   color: white;
   margin-bottom: 15px;
 }
-
+.notice {
+  text-align: center;
+  margin-top: 150px;
+  color: #555;
+  font-style: italic;
+}
+.updated{
+  text-align:center;
+  margin-top:20px;
+  color: #1f8ec2;
+}
 .slogan {
   font-style: italic;
   color: #1a1a2e;
   font-weight: bold;
 }
 .footer {
-  background-color: #111827;
+  background-color: #1f8ec2;
   color: #cbd5e1;
   text-align: center;
   padding: 25px;
   margin-top: 20px;
   font-size: 14px;
+  width: 100%;
 }
 @media (max-width: 900px) {
   .members {
@@ -179,17 +214,63 @@ body {
   }
 }
   /* MOBILE RESPONSIVE */
-  @media (max-width: 600px) {
-    .header-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav {
-      flex-wrap: wrap;
-    }
-  
-    .header input {
-      width: 100%;
-    }
+ /* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+
+  /* HEADER STACKING */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
   }
+
+  /* NAV WRAP NICELY */
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0; /* override your desktop spacing */
+  }
+
+  /* SEARCH BOX FULL WIDTH */
+  .search-box {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header input[type="text"] {
+    width: 90%;
+  }
+
+  /* REMOVE BIG SPACING ON MOBILE */
+  .oldboys {
+    margin-right: 0;
+  }
+
+  /* HERO TEXT SCALE */
+  .hero {
+    height: 220px;
+    padding: 10px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* MEMBERS GRID */
+  .members {
+    grid-template-columns: 1fr;
+  }
+
+  /* CARD IMAGE SMALLER */
+  .card img {
+    width: 80px;
+    height: 120px;
+  }
+}
