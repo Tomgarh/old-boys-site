@@ -89,14 +89,11 @@ body {
     margin-left: 2px;
   }
   .hero {
-    height: 700px;
+    min-height: 100vh; 
     background-image: url("img/church.jpeg");
-     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: -18px;
+    background-size: cover;
     background-position: center bottom;
-
+    background-repeat: no-repeat;
   
     display: flex;
     flex-direction: column;
@@ -113,7 +110,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 0;
   }
   .hero h2 p{
@@ -138,10 +135,21 @@ body {
   color: #1f8ec2;
 }
 .grid {
-  grid-template-columns: repeat(3, 1fr);
-  
-  padding: 10px;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 .view{
   background-color: #1f8ec2;
