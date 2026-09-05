@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Old Boys Election 2026</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="election.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+
+      <a href="index.html"><img src="img/casan-logo.png" class="logo" /></a>
+
+      <div class="oldboys">
+        <h1>St. Bernard’s Altar Servers Old Boys Association</h1>
+        <p class="tagline">Election Portal 2026</p>
+      </div>
+
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#info">Info</a>
+        <a href="#positions">Positions</a>
+        <a href="#candidates">Interest Board</a>
+        <a href="#register">Declare Interest</a>
+        <a href="#register">Nomination Form</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h2>OLD BOYS ELECTION 2026</h2>
+
+      <p class="slogan">Transparent • Secure • Unified</p>
+
+      <p>Vote for leaders who will serve with honesty and dedication.</p>
+
+      <!-- COUNTDOWN -->
+      <div class="countdown">
+
+        <div class="time-box">
+          <h3 id="days">00</h3>
+          <span>Days</span>
+        </div>
+
+        <div class="time-box">
+          <h3 id="hours">00</h3>
+          <span>Hours</span>
+        </div>
+
+        <div class="time-box">
+          <h3 id="minutes">00</h3>
+          <span>Minutes</span>
+        </div>
+
+        <div class="time-box">
+          <h3 id="seconds">00</h3>
+          <span>Seconds</span>
+        </div>
+
+      </div>
+
+      <a href="#register">
+        <button class="view">Declare Interest</button>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- INFO -->
+  <section class="section" id="info">
+
+    <h2 class="section-title">Election Information</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Election Date</h3>
+        <p>June 13, 2026</p>
+      </div>
+
+      <div class="card">
+        <h3>Voting Method</h3>
+        <p>Online Portal</p>
+      </div>
+
+      <div class="card">
+        <h3>Eligibility</h3>
+        <p>Registered Old Boys Only</p>
+      </div>
+
+      <div class="card">
+        <h3>Next Meeting</h3>
+        <p>2nd Sunday every 3 months</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- POSITIONS -->
+  <section class="section" id="positions">
+
+    <h2 class="section-title">Available Positions</h2>
+
+    <div class="grid">
+
+      <div class="card">President</div>
+      <div class="card">Vice President</div>
+      <div class="card">Secretary</div>
+      <div class="card">Treasurer</div>
+      <div class="card">PRO</div>
+      <div class="card">Financial Secretary</div>
+      <div class="card">Welfare I</div>
+      <div class="card">Welfare II</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTEREST BOARD -->
+  <section class="section" id="candidates">
+
+    <h2 class="section-title">Interest Board</h2>
+
+    <p style="text-align:center; color:#555;">
+      Members who declare interest will appear here.
+    </p>
+
+    <div class="grid" id="candidateGrid">
+      <!-- JS inserts candidates here -->
+    </div>
+
+  </section>
+
+
+  <!-- DECLARE INTEREST FORM -->
+  <section class="section" id="register">
+
+    <h2 class="section-title">Declare Interest</h2>
+  
+    <div class="form-document">
+  
+      <p><strong>DECLARATION OF INTEREST FORM</strong></p>
+      <p>Please complete this form carefully with accurate information.</p>
+  
+      <br>
+  
+      <form id="interestForm" onsubmit="return false;">
+        <p><strong>Passport Photo:</strong></p>
+<input type="file" accept="image/*" id="passportInput" required>
+
+<img id="previewImage" style="
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border:3px solid #1f8ec2;
+  margin-top:10px;
+">
+  
+        <p><strong>Full Name:</strong></p>
+        <input type="text" required>
+  
+        <p><strong>Phone Number:</strong></p>
+        <input type="text" required>
+  
+        <p><strong>Year of Induction:</strong></p>
+        <input type="text" required>
+  
+        <p><strong>Office Sought:</strong></p>
+        <select required>
+          <option value="">Select Position</option>
+          <option>President</option>
+          <option>Vice President</option>
+          <option>Secretary</option>
+          <option>Treasurer</option>
+          <option>PRO</option>
+          <option>Financial Secretary</option>
+          <option>Welfare I</option>
+          <option>Welfare II</option>
+        </select>
+  
+        <p><strong>Are you an active member?</strong></p>
+        <select required>
+          <option value="">Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+  
+        <p><strong>Do you meet eligibility requirements?</strong></p>
+        <select required>
+          <option value="">Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+  
+        <p><strong>Manifesto:</strong></p>
+        <textarea rows="5" required></textarea>
+  
+        <br><br>
+  
+        <p><strong>DECLARATION</strong></p>
+        <p>
+          I confirm that the information provided is true and correct.
+        </p>
+  
+        <p><strong>Signature:</strong></p>
+<input type="text" placeholder="Type your full name as signature" required>
+  
+        <p><strong>Date:</strong></p>
+        <input type="date" required>
+  
+        <br><br>
+  
+        <button type="submit" class="view">Submit Application</button>
+  
+      </form>
+  
+    </div>
+  
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 CASAN Old Boys Association</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script type="module" src="election.js"></script>
+
+</body>
+</html>
