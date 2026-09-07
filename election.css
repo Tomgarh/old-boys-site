@@ -1,214 +1,1328 @@
+/* =========================================
+   RESET & GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f4f4f4;
-  }
-  
-  /* HEADER (your existing CASAN style) */
-  .header {
-    background-color: #1f8ec2;
-    color: white;
-    padding: 15px 20px;
-  }
-  
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f4f6f9;
+  color: #263238;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================
+ HEADER
+========================================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: #0b1f3a;
+  color: white;
+
+  border-bottom: 4px solid #d4af37;
+
+  box-shadow:
+      0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.header-container {
+  width: 92%;
+  max-width: 1350px;
+
+  min-height: 92px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.oldboys {
+  flex: 1;
+}
+
+.oldboys h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 22px;
+  line-height: 1.25;
+
+  color: white;
+
+  margin-bottom: 4px;
+}
+
+.tagline {
+  color: #d4af37;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.nav a {
+  padding: 9px 11px;
+
+  color: #dbe4ef;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  border-radius: 6px;
+
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #d4af37;
+}
+
+
+/* =========================================
+ HERO
+========================================= */
+
+.hero {
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 80px 20px;
+
+  background:
+      linear-gradient(
+          rgba(11, 31, 58, 0.94),
+          rgba(11, 31, 58, 0.96)
+      );
+
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border: 1px solid rgba(212, 175, 55, 0.18);
+
+  border-radius: 50%;
+
+  top: -220px;
+  right: -150px;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  border: 1px solid rgba(212, 175, 55, 0.12);
+
+  border-radius: 50%;
+
+  bottom: -220px;
+  left: -150px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 850px;
+
+  text-align: center;
+
+  color: white;
+}
+
+.hero-content h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 6vw, 68px);
+
+  line-height: 1.1;
+
+  color: white;
+
+  margin-bottom: 18px;
+}
+
+.slogan {
+  color: #d4af37;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 14px;
+}
+
+.hero-content > p:not(.slogan) {
+  color: #d6deea;
+
+  font-size: 16px;
+
+  max-width: 650px;
+
+  margin: 0 auto 38px;
+}
+
+
+/* =========================================
+ COUNTDOWN
+========================================= */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin: 30px auto 38px;
+}
+
+.time-box {
+  min-width: 105px;
+
+  padding: 18px 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(212, 175, 55, 0.45);
+
+  border-radius: 10px;
+
+  backdrop-filter: blur(5px);
+}
+
+.time-box h3 {
+  color: white;
+
+  font-size: 31px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  margin-bottom: 8px;
+}
+
+.time-box span {
+  color: #d4af37;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+ MAIN BUTTON
+========================================= */
+
+.view {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 12px 28px;
+
+  background: #d4af37;
+  color: #0b1f3a;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  box-shadow:
+      0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.view:hover {
+  background: #e3c65c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.view:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+ GENERAL SECTIONS
+========================================= */
+
+.section {
+  width: 92%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 80px 0;
+}
+
+.section-title {
+  position: relative;
+
+  text-align: center;
+
+  font-family: "Playfair Display", serif;
+
+  color: #0b1f3a;
+
+  font-size: 36px;
+
+  margin-bottom: 45px;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 3px;
+
+  background: #d4af37;
+
+  margin: 13px auto 0;
+}
+
+
+/* =========================================
+ GRID
+========================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================
+ GENERAL CARDS
+========================================= */
+
+.card {
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 11px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  box-shadow:
+      0 5px 18px rgba(0, 0, 0, 0.045);
+
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(212, 175, 55, 0.55);
+
+  box-shadow:
+      0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #0b1f3a;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 18px;
+
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+ ELECTION INFO
+========================================= */
+
+#info {
+  background: #f4f6f9;
+}
+
+#info .card {
+  position: relative;
+
+  overflow: hidden;
+}
+
+#info .card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: #d4af37;
+}
+
+#info .card h3 {
+  margin-top: 8px;
+}
+
+
+/* =========================================
+ POSITIONS
+========================================= */
+
+#positions {
+  background: white;
+
+  max-width: none;
+
+  width: 100%;
+
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+#positions .grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+#positions .card {
+  color: #0b1f3a;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  padding: 22px 15px;
+}
+
+
+/* =========================================
+ CANDIDATES
+========================================= */
+
+#candidates {
+  background: #f4f6f9;
+}
+
+#candidates > p {
+  max-width: 650px;
+
+  margin: -25px auto 35px;
+
+  color: #64748b !important;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+#candidateGrid {
+  grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+}
+
+
+/*
+ JavaScript-generated candidate cards
+*/
+
+#candidateGrid > div {
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  padding: 22px;
+
+  box-shadow:
+      0 5px 18px rgba(0, 0, 0, 0.05);
+
+  transition: 0.25s ease;
+}
+
+#candidateGrid > div:hover {
+  transform: translateY(-4px);
+
+  border-color: #d4af37;
+}
+
+
+/* =========================================
+ VOTING SECTION
+========================================= */
+
+.voting-section {
+  max-width: none;
+
+  width: 100%;
+
+  background: white;
+
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.vote-intro {
+  max-width: 760px;
+
+  margin: -20px auto 40px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+ VOTING CARDS
+========================================= */
+
+.voting-card {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto 30px;
+
+  padding: 35px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 13px;
+
+  box-shadow:
+      0 8px 25px rgba(0, 0, 0, 0.055);
+}
+
+.voting-card h3 {
+  color: #0b1f3a;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+
+.voting-card > p {
+  color: #64748b;
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+ LOGIN FORM
+========================================= */
+
+#phoneForm {
+  margin-top: 25px;
+}
+
+#phoneForm label {
+  display: block;
+
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  margin-bottom: 7px;
+}
+
+#phoneForm input {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 14px;
+
+  margin-bottom: 19px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: white;
+
+  color: #1e293b;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+#phoneForm input:focus {
+  border-color: #0b1f3a;
+
+  box-shadow:
+      0 0 0 3px rgba(11, 31, 58, 0.1);
+}
+
+#phoneForm input::placeholder {
+  color: #9ca3af;
+}
+
+#phoneForm .view {
+  width: 100%;
+
+  background: #0b1f3a;
+
+  color: white;
+}
+
+#phoneForm .view:hover {
+  background: #14345f;
+}
+
+
+/* =========================================
+ FORM MESSAGES
+========================================= */
+
+.form-message {
+  margin-top: 15px;
+
+  padding: 11px 14px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+ BALLOT
+========================================= */
+
+.ballot {
+  border-top: 4px solid #d4af37;
+}
+
+.ballot > h3 {
+  margin-bottom: 7px;
+}
+
+.ballot > p {
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+ POSITION VOTING
+========================================= */
+
+.position-vote {
+  padding: 25px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.position-vote:last-of-type {
+  border-bottom: none;
+}
+
+.position-vote h4 {
+  color: #0b1f3a;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 20px;
+
+  margin-bottom: 16px;
+
+  padding-left: 13px;
+
+  border-left: 4px solid #d4af37;
+}
+
+
+/*
+ Candidate radio/select elements
+ created by JavaScript
+*/
+
+.position-vote label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 15px;
+
+  margin-bottom: 9px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 7px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.position-vote label:hover {
+  background: #f1f5f9;
+
+  border-color: #d4af37;
+}
+
+.position-vote input[type="radio"] {
+  width: 17px;
+  height: 17px;
+
+  accent-color: #0b1f3a;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+ VOTE SUBMISSION
+========================================= */
+
+.vote-submit {
+  margin-top: 30px;
+
+  padding: 25px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.vote-submit p {
+  color: #64748b;
+
+  font-size: 13px;
+
+  margin-bottom: 18px;
+}
+
+.vote-submit strong {
+  color: #0b1f3a;
+}
+
+#submitVote {
+  min-width: 210px;
+
+  background: #0b1f3a;
+
+  color: white;
+}
+
+#submitVote:hover {
+  background: #14345f;
+}
+
+
+/* =========================================
+ ALREADY VOTED
+========================================= */
+
+#alreadyVoted {
+  text-align: center;
+
+  border-top: 4px solid #d4af37;
+}
+
+#alreadyVoted h3 {
+  color: #0b1f3a;
+}
+
+#alreadyVoted::before {
+  content: "✓";
+
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef3f8;
+
+  border-radius: 50%;
+
+  color: #0b1f3a;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+ SUCCESS MESSAGE
+========================================= */
+
+#voteSuccess {
+  text-align: center;
+
+  border-top: 4px solid #16a34a;
+}
+
+#voteSuccess h3 {
+  color: #0b1f3a;
+}
+
+#voteSuccess h3::first-letter {
+  color: #16a34a;
+}
+
+
+/* =========================================
+ DECLARE INTEREST
+========================================= */
+
+#register {
+  max-width: none;
+
+  width: 100%;
+
+  background: #f4f6f9;
+
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.form-document {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 40px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 13px;
+
+  box-shadow:
+      0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.form-document > p:first-child {
+  text-align: center;
+
+  color: #0b1f3a;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 23px;
+
+  margin-bottom: 8px;
+}
+
+.form-document > p:nth-child(2) {
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+ DECLARATION FORM
+========================================= */
+
+#interestForm p {
+  color: #334155;
+
+  font-size: 13px;
+
+  margin-top: 18px;
+
+  margin-bottom: 7px;
+}
+
+#interestForm p strong {
+  color: #0b1f3a;
+}
+
+#interestForm input[type="text"],
+#interestForm input[type="tel"],
+#interestForm input[type="date"],
+#interestForm input[type="file"],
+#interestForm select,
+#interestForm textarea {
+  width: 100%;
+
+  padding: 12px 13px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: white;
+
+  color: #1e293b;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+#interestForm input[type="text"]:focus,
+#interestForm input[type="tel"]:focus,
+#interestForm input[type="date"]:focus,
+#interestForm input[type="file"]:focus,
+#interestForm select:focus,
+#interestForm textarea:focus {
+  border-color: #0b1f3a;
+
+  box-shadow:
+      0 0 0 3px rgba(11, 31, 58, 0.1);
+}
+
+#interestForm textarea {
+  min-height: 130px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+ FILE UPLOAD
+========================================= */
+
+#interestForm input[type="file"] {
+  padding: 10px;
+
+  background: #f8fafc;
+
+  cursor: pointer;
+}
+
+#previewImage {
+  width: 120px !important;
+  height: 120px !important;
+
+  object-fit: cover;
+
+  margin-top: 12px !important;
+
+  border: 3px solid #d4af37 !important;
+
+  border-radius: 8px;
+
+  background: #f1f5f9;
+}
+
+
+/* =========================================
+ DECLARATION SUBMIT
+========================================= */
+
+#interestForm .view {
+  width: 100%;
+
+  margin-top: 5px;
+
+  background: #0b1f3a;
+
+  color: white;
+}
+
+#interestForm .view:hover {
+  background: #14345f;
+}
+
+
+/* =========================================
+ FOOTER
+========================================= */
+
+.footer {
+  background: #0b1f3a;
+
+  color: #cbd5e1;
+
+  text-align: center;
+
+  padding: 28px 20px;
+
+  border-top: 4px solid #d4af37;
+}
+
+.footer p {
+  font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
   .header-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .logo {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-  }
-  
-  .oldboys h1 {
-    font-size: 18px;
-    margin: 0;
-  }
-  
-  .tagline {
-    font-size: 13px;
-    color: #cbd5e1;
-  }
-  
-  .nav {
-    display: flex;
-    gap: 15px;
-    margin-left: auto;
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .nav a:hover {
-    color: #38bdf8;
-  }
-  
-  /* HERO */
-  .hero {
-    min-height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("img/church.jpeg");
-    background-size: cover;
-    background-position: center;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  
-    color: white;
-    padding: 20px;
-  }
-  
-  .hero-content h2 {
-    font-size: 2.5rem;
-  }
-  
-  .slogan {
-    font-style: italic;
-    color: #cbd5e1;
-  }
-  
-  /* COUNTDOWN */
-  .countdown {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 25px 0;
-  }
-  
-  .time-box {
-    background: rgba(255,255,255,0.12);
-    padding: 15px;
-    border-radius: 10px;
-    width: 80px;
-  }
-  
-  .time-box h3 {
-    color: #38bdf8;
-    margin: 0;
-  }
-  
-  /* SECTION */
-  .section {
-    padding: 60px 20px;
-  }
-  
-  .section-title {
-    text-align: center;
-    color: #1f8ec2;
-    margin-bottom: 20px;
-  }
-  
-  /* GRID + CARDS */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-  }
-  
-  .card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-  
-  .card img {
-    width: 100%;
-    border-radius: 10px;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  /* FORM */
-  .form {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  input, select, textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-  }
-  
-  .view {
-    background: #1f8ec2;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-  }
-  .form-document{
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    line-height: 1.7;
-  }
-  
-  .form-document p{
-    margin-top: 12px;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .form-document input,
-  .form-document select,
-  .form-document textarea{
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .form-document textarea{
-    resize: none;
-  }
-  
-  /* FOOTER */
-  .footer {
-    background: #1f8ec2;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* MOBILE */
-  @media (max-width: 768px) {
-    .hero-content h2 {
-      font-size: 1.8rem;
-    }
-  
-    .nav {
       flex-wrap: wrap;
-      justify-content: center;
-      margin-left: 0;
-    }
+      padding: 15px 0;
   }
+
+  .nav {
+      width: 100%;
+      justify-content: center;
+      padding-top: 5px;
+      overflow-x: auto;
+  }
+
+  .grid {
+      grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+  }
+
+  #candidateGrid {
+      grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  /* Sticky header */
+  .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  }
+
+  /* Prevent sticky header from covering sections */
+  html {
+      scroll-padding-top: 150px;
+  }
+
+  section {
+      scroll-margin-top: 150px;
+  }
+
+
+  .header-container {
+      width: 94%;
+      flex-direction: column;
+      text-align: center;
+      gap: 8px;
+      padding: 16px 0 12px;
+  }
+
+  .logo {
+      width: 58px;
+      height: 58px;
+  }
+
+  .oldboys h1 {
+      font-size: 18px;
+  }
+
+  .tagline {
+      font-size: 12px;
+  }
+
+  .nav {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 2px;
+      padding: 8px 0 2px;
+      overflow-x: auto;
+      scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+      display: none;
+  }
+
+  .nav a {
+      flex-shrink: 0;
+      padding: 8px 10px;
+      font-size: 11px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+      min-height: 600px;
+      padding: 65px 18px;
+  }
+
+  .hero-content h2 {
+      font-size: 38px;
+  }
+
+  .slogan {
+      font-size: 12px;
+      letter-spacing: 2px;
+  }
+
+  .hero-content > p:not(.slogan) {
+      font-size: 14px;
+  }
+
+
+  /* COUNTDOWN */
+
+  .countdown {
+      display: grid;
+      grid-template-columns:
+          repeat(2, 1fr);
+      max-width: 310px;
+      gap: 10px;
+  }
+
+  .time-box {
+      min-width: 0;
+      padding: 15px 10px;
+  }
+
+  .time-box h3 {
+      font-size: 26px;
+  }
+
+
+  /* SECTIONS */
+
+  .section {
+      width: 92%;
+      padding: 60px 0;
+  }
+
+  #positions,
+  .voting-section,
+  #register {
+      padding-left: 4%;
+      padding-right: 4%;
+  }
+
+  .section-title {
+      font-size: 30px;
+      margin-bottom: 35px;
+  }
+
+
+  /* GRIDS */
+
+  .grid,
+  #candidateGrid {
+      grid-template-columns: 1fr;
+  }
+
+
+  /* VOTING */
+
+  .voting-card {
+      padding: 25px 20px;
+  }
+
+  .voting-card h3 {
+      font-size: 22px;
+  }
+
+  .position-vote {
+      padding: 22px 0;
+  }
+
+  .position-vote h4 {
+      font-size: 18px;
+  }
+
+  .vote-submit {
+      padding: 20px 15px;
+  }
+
+  #submitVote {
+      width: 100%;
+  }
+
+
+  /* INTEREST FORM */
+
+  .form-document {
+      padding: 27px 20px;
+  }
+
+  .form-document > p:first-child {
+      font-size: 20px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+  /* Slightly more space for the taller mobile header */
+  html {
+      scroll-padding-top: 155px;
+  }
+
+  section {
+      scroll-margin-top: 155px;
+  }
+
+
+  .oldboys h1 {
+      font-size: 16px;
+  }
+
+  .hero-content h2 {
+      font-size: 32px;
+  }
+
+  .hero {
+      min-height: 560px;
+  }
+
+  .slogan {
+      font-size: 11px;
+  }
+
+  .section-title {
+      font-size: 27px;
+  }
+
+  .voting-card {
+      padding: 22px 16px;
+  }
+
+  .form-document {
+      padding: 23px 16px;
+  }
+
+}

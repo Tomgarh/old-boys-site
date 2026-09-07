@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Old Boys Election 2026 | Voter Verification</title>
+
+    <link rel="stylesheet" href="voter-registration.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>St. Bernard's Altar Servers Old Boys Association</h1>
+            <p>2026 Election</p>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+
+                <h2>Voter Verification</h2>
+
+                <p>
+                    If you are an eligible member of the St. Bernard's
+                    Altar Servers Old Boys Association and wish to participate
+                    in the 2026 election, please submit your details below.
+                </p>
+
+                <p>
+                    Your information will be reviewed by the election
+                    administrator before you are approved to vote.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================
+             ACCOUNT ACCESS
+        ====================================== -->
+
+        <section class="form-section">
+
+            <div class="container">
+
+                <div class="form-card">
+
+                    <h2>Election Account</h2>
+
+                    <p class="form-intro">
+                        Create an account or sign in before submitting your
+                        voter verification details.
+                    </p>
+
+
+                    <!-- AUTH EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="authEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="authEmail"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+
+                    <!-- AUTH PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="authPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="authPassword"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                        >
+
+                    </div>
+
+
+                    <!-- AUTH MESSAGE -->
+
+                    <div
+                        id="authMessage"
+                        class="form-message"
+                        aria-live="polite">
+                    </div>
+
+
+                    <!-- AUTH BUTTONS -->
+
+                    <div class="auth-buttons">
+
+                        <button
+                            type="button"
+                            id="createAccountButton">
+
+                            Create Account
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="signInButton">
+
+                            Sign In
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- LOGGED IN STATUS -->
+
+                    <div
+                        id="accountStatus"
+                        class="success-message"
+                        style="display: none;">
+
+                        <h3>Account Signed In</h3>
+
+                        <p id="accountStatusText"></p>
+
+                        <button
+                            type="button"
+                            id="signOutButton">
+
+                            Sign Out
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     VOTER VERIFICATION FORM
+                ====================================== -->
+
+                <div
+                    class="form-card"
+                    id="verificationCard"
+                    style="margin-top: 30px;">
+
+                    <h2>Submit Your Details</h2>
+
+                    <p class="form-intro">
+                        Please create an election account and sign in before
+                        submitting your membership information.
+                    </p>
+
+
+                    <form
+                        id="voterForm"
+                        style="display: none;">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="fullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="e.g. 08012345678"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                readonly
+                                required
+                            >
+
+                            <small>
+                                This must match the email used for your
+                                election account.
+                            </small>
+
+                        </div>
+
+
+                        <!-- INDUCTION YEAR -->
+
+                        <div class="form-group">
+
+                            <label for="inductionYear">
+                                Year of Induction
+                            </label>
+
+                            <input
+                                type="number"
+                                id="inductionYear"
+                                name="inductionYear"
+                                placeholder="e.g. 2018"
+                                min="1950"
+                                max="2026"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- DECLARATION -->
+
+                        <div class="declaration">
+
+                            <label class="checkbox-container">
+
+                                <input
+                                    type="checkbox"
+                                    id="declaration"
+                                    required
+                                >
+
+                                <span>
+                                    I confirm that the information provided
+                                    is accurate and that I am a member of
+                                    the St. Bernard's Altar Servers Old Boys
+                                    Association.
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div
+                            id="formMessage"
+                            class="form-message"
+                            aria-live="polite">
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            id="submitButton">
+
+                            Submit for Verification
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- NOT SIGNED IN -->
+
+                    <div
+                        id="loginRequiredMessage"
+                        class="form-message">
+
+                        Create an election account or sign in above to
+                        continue.
+
+                    </div>
+
+
+                    <!-- SUCCESS -->
+
+                    <div
+                        id="successMessage"
+                        class="success-message"
+                        style="display: none;">
+
+                        <h3>Details Submitted Successfully</h3>
+
+                        <p>
+                            Your information has been submitted for
+                            verification.
+                        </p>
+
+                        <p>
+                            The election administrator will review your
+                            membership details. If approved, you will receive
+                            instructions for accessing the election.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INFORMATION
+        ====================================== -->
+
+        <section class="info-section">
+
+            <div class="container">
+
+                <div class="info-card">
+
+                    <h3>How the Verification Process Works</h3>
+
+                    <ol>
+
+                        <li>
+                            Create an election account.
+                        </li>
+
+                        <li>
+                            Verify your email address.
+                        </li>
+
+                        <li>
+                            Submit your membership details.
+                        </li>
+
+                        <li>
+                            The election administrator verifies your
+                            membership.
+                        </li>
+
+                        <li>
+                            Approved members are added to the official
+                            voter register.
+                        </li>
+
+                        <li>
+                            You will receive instructions for accessing
+                            the election.
+                        </li>
+
+                        <li>
+                            Each approved voter will be allowed to vote
+                            only once.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                St. Bernard's Altar Servers Old Boys Association
+            </p>
+
+            <p>
+                2026 Election Portal
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script
+        type="module"
+        src="voter-registration.js">
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Election Results | St. Bernard's Altar Servers Old Boys Association</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #d1d5db;
+            font-size: 15px;
+        }
+
+        .status {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 14px;
+        }
+
+        .live-dot {
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            background: #22c55e;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .position-section {
+            margin-bottom: 35px;
+        }
+
+        .position-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #111827;
+            border-left: 5px solid #111827;
+            padding-left: 12px;
+        }
+
+        .candidates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
+        }
+
+        .candidate-card {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+
+        .candidate-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .candidate-card.leader {
+            border: 2px solid #f59e0b;
+        }
+
+        .leader-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #f59e0b;
+            color: white;
+            padding: 5px 9px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .candidate-photo {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 12px;
+            background: #e5e7eb;
+        }
+
+        .candidate-name {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .vote-count {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .vote-label {
+            text-align: center;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .loading,
+        .empty,
+        .error {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            color: #6b7280;
+        }
+
+        .error {
+            color: #dc2626;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 23px;
+            }
+
+            .position-title {
+                font-size: 19px;
+            }
+
+            .candidates {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>2026 Election Results</h1>
+        <p>St. Bernard's Altar Servers Old Boys Association</p>
+    </header>
+
+    <div class="status">
+        <span class="live-dot"></span>
+        <strong>LIVE RESULTS</strong>
+        — Vote counts update automatically
+    </div>
+
+    <main class="container" id="resultsContainer">
+
+        <div class="loading">
+            Loading live results...
+        </div>
+
+    </main>
+
+    <footer>
+        St. Bernard's Altar Servers Old Boys Association<br>
+        Election 2026
+    </footer>
+
+    <script type="module" src="results.js"></script>
+
+</body>
+</html>

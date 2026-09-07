@@ -3,12 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Old Boys Election 2026</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- CSS -->
   <link rel="stylesheet" href="election.css">
@@ -16,11 +19,18 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
+
   <header class="header">
     <div class="header-container">
 
-      <a href="index.html"><img src="img/casan-logo.png" class="logo" /></a>
+      <a href="index.html">
+        <img
+          src="img/casan-logo.png"
+          class="logo"
+          alt="CASAN Logo"
+        >
+      </a>
 
       <div class="oldboys">
         <h1>St. Bernard’s Altar Servers Old Boys Association</h1>
@@ -31,26 +41,34 @@
         <a href="#home">Home</a>
         <a href="#info">Info</a>
         <a href="#positions">Positions</a>
-        <a href="#candidates">Interest Board</a>
+        <a href="#candidates">Candidates</a>
+        <a href="#vote">Vote</a>
+        <a href="results.html">Results</a>
         <a href="#register">Declare Interest</a>
-        <a href="#register">Nomination Form</a>
       </nav>
 
     </div>
   </header>
 
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
+
   <section class="hero" id="home">
+
     <div class="hero-content">
 
       <h2>OLD BOYS ELECTION 2026</h2>
 
-      <p class="slogan">Transparent • Secure • Unified</p>
+      <p class="slogan">
+        Transparent • Secure • Unified
+      </p>
 
-      <p>Vote for leaders who will serve with honesty and dedication.</p>
+      <p>
+        Vote for leaders who will serve with honesty and dedication.
+      </p>
 
       <!-- COUNTDOWN -->
+
       <div class="countdown">
 
         <div class="time-box">
@@ -75,29 +93,33 @@
 
       </div>
 
-      <a href="#register">
-        <button class="view">Declare Interest</button>
+      <a href="#vote" class="view">
+        Vote Now
       </a>
 
     </div>
+
   </section>
 
 
-  <!-- INFO -->
+  <!-- ================= ELECTION INFO ================= -->
+
   <section class="section" id="info">
 
-    <h2 class="section-title">Election Information</h2>
+    <h2 class="section-title">
+      Election Information
+    </h2>
 
     <div class="grid">
 
       <div class="card">
         <h3>Election Date</h3>
-        <p>June 13, 2026</p>
+        <p>September 13, 2026</p>
       </div>
 
       <div class="card">
         <h3>Voting Method</h3>
-        <p>Online Portal</p>
+        <p>Secure Online Portal</p>
       </div>
 
       <div class="card">
@@ -106,8 +128,8 @@
       </div>
 
       <div class="card">
-        <h3>Next Meeting</h3>
-        <p>2nd Sunday every 3 months</p>
+        <h3>Voting System</h3>
+        <p>One Member, One Vote</p>
       </div>
 
     </div>
@@ -115,135 +137,640 @@
   </section>
 
 
-  <!-- POSITIONS -->
+  <!-- ================= POSITIONS ================= -->
+
   <section class="section" id="positions">
 
-    <h2 class="section-title">Available Positions</h2>
+    <h2 class="section-title">
+      Available Positions
+    </h2>
 
     <div class="grid">
 
-      <div class="card">President</div>
-      <div class="card">Vice President</div>
+      <div class="card">Chairman</div>
+
+      <div class="card">Vice Chairman</div>
+
       <div class="card">Secretary</div>
-      <div class="card">Treasurer</div>
-      <div class="card">PRO</div>
+
+      <div class="card">Assistant Secretary</div>
+
       <div class="card">Financial Secretary</div>
-      <div class="card">Welfare I</div>
-      <div class="card">Welfare II</div>
+
+      <div class="card">Treasurer</div>
+
+      <div class="card">Public Relations Officer (PRO)</div>
+
+      <div class="card">Welfare Officer</div>
+
+      <div class="card">Director of Sports and Socials</div>
+
+      <div class="card">Director of Spirituality</div>
 
     </div>
 
   </section>
 
 
-  <!-- INTEREST BOARD -->
+  <!-- ================= CANDIDATES ================= -->
+
   <section class="section" id="candidates">
 
-    <h2 class="section-title">Interest Board</h2>
+    <h2 class="section-title">
+      Candidates
+    </h2>
 
     <p style="text-align:center; color:#555;">
-      Members who declare interest will appear here.
+      View members who have been approved to contest in the election.
     </p>
 
     <div class="grid" id="candidateGrid">
-      <!-- JS inserts candidates here -->
+      <!-- Candidates will be inserted by JavaScript -->
     </div>
 
   </section>
 
 
-  <!-- DECLARE INTEREST FORM -->
+  <!-- ================= VOTING ================= -->
+
+  <section class="section voting-section" id="vote">
+
+    <h2 class="section-title">
+      Cast Your Vote
+    </h2>
+
+    <p class="vote-intro">
+      Voting is restricted to registered Old Boys Association members.
+      You must sign in with your verified email account and be approved
+      as an eligible voter before you can vote.
+    </p>
+
+
+    <!-- ================= VOTER LOGIN ================= -->
+
+    <div class="voting-card" id="voterLogin">
+
+      <h3>Voter Sign In</h3>
+
+      <p>
+        Sign in with the email address and password associated with
+        your voter account.
+      </p>
+
+      <form id="phoneForm">
+
+        <label for="authEmail">
+          Email Address
+        </label>
+
+        <input
+          type="email"
+          id="authEmail"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+        >
+
+        <label for="authPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="authPassword"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required
+        >
+
+        <button
+          type="submit"
+          class="view"
+        >
+          Sign In to Vote
+        </button>
+
+      </form>
+
+      <p id="phoneMessage" class="form-message"></p>
+
+      <p id="authMessage" class="form-message"></p>
+
+      <p style="margin-top: 15px;">
+        Your email address must be verified and your voter registration
+        must be approved by an administrator before you can access the ballot.
+      </p>
+
+    </div>
+
+
+    <!-- ================= BALLOT ================= -->
+
+    <div
+      class="voting-card ballot"
+      id="ballotSection"
+      style="display:none;"
+    >
+
+      <h3>Official Election Ballot</h3>
+
+      <p>
+        Select one candidate for each position.
+        Your vote can only be submitted once.
+      </p>
+
+
+      <!-- CHAIRMAN -->
+
+      <div class="position-vote">
+
+        <h4>Chairman</h4>
+
+        <div id="chairmanCandidates">
+          <!-- Chairman candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- VICE CHAIRMAN -->
+
+      <div class="position-vote">
+
+        <h4>Vice Chairman</h4>
+
+        <div id="viceChairmanCandidates">
+          <!-- Vice Chairman candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- SECRETARY -->
+
+      <div class="position-vote">
+
+        <h4>Secretary</h4>
+
+        <div id="secretaryCandidates">
+          <!-- Secretary candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- ASSISTANT SECRETARY -->
+
+      <div class="position-vote">
+
+        <h4>Assistant Secretary</h4>
+
+        <div id="assistantSecretaryCandidates">
+          <!-- Assistant Secretary candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- FINANCIAL SECRETARY -->
+
+      <div class="position-vote">
+
+        <h4>Financial Secretary</h4>
+
+        <div id="financialSecretaryCandidates">
+          <!-- Financial Secretary candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- TREASURER -->
+
+      <div class="position-vote">
+
+        <h4>Treasurer</h4>
+
+        <div id="treasurerCandidates">
+          <!-- Treasurer candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- PRO -->
+
+      <div class="position-vote">
+
+        <h4>Public Relations Officer (PRO)</h4>
+
+        <div id="proCandidates">
+          <!-- PRO candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- WELFARE OFFICER -->
+
+      <div class="position-vote">
+
+        <h4>Welfare Officer</h4>
+
+        <div id="welfareCandidates">
+          <!-- Welfare Officer candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- DIRECTOR OF SPORTS AND SOCIALS -->
+
+      <div class="position-vote">
+
+        <h4>Director of Sports and Socials</h4>
+
+        <div id="sportsSocialsCandidates">
+          <!-- Sports and Socials candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- DIRECTOR OF SPIRITUALITY -->
+
+      <div class="position-vote">
+
+        <h4>Director of Spirituality</h4>
+
+        <div id="spiritualityCandidates">
+          <!-- Spirituality candidates inserted by JavaScript -->
+        </div>
+
+      </div>
+
+
+      <!-- ================= SUBMIT VOTE ================= -->
+
+      <div class="vote-submit">
+
+        <p>
+          <strong>Important:</strong>
+          Once your vote is submitted, you will not be able to vote again.
+        </p>
+
+        <button
+          type="button"
+          id="submitVote"
+          class="view"
+        >
+          Submit My Vote
+        </button>
+
+      </div>
+
+      <p
+        id="voteMessage"
+        class="form-message"
+      ></p>
+
+    </div>
+
+
+    <!-- ================= ALREADY VOTED ================= -->
+
+    <div
+      class="voting-card"
+      id="alreadyVoted"
+      style="display:none;"
+    >
+
+      <h3>Vote Already Recorded</h3>
+
+      <p>
+        Our records show that you have already voted in this election.
+      </p>
+
+      <p>
+        Each eligible member can vote only once.
+      </p>
+
+    </div>
+
+
+    <!-- ================= SUCCESS ================= -->
+
+    <div
+      class="voting-card"
+      id="voteSuccess"
+      style="display:none;"
+    >
+
+      <h3>✓ Vote Successfully Submitted</h3>
+
+      <p>
+        Thank you for participating in the Old Boys Association Election.
+      </p>
+
+      <p>
+        Your vote has been securely recorded.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= DECLARE INTEREST ================= -->
+
   <section class="section" id="register">
 
-    <h2 class="section-title">Declare Interest</h2>
-  
-    <div class="form-document">
-  
-      <p><strong>DECLARATION OF INTEREST FORM</strong></p>
-      <p>Please complete this form carefully with accurate information.</p>
-  
-      <br>
-  
-      <form id="interestForm">
-        <p><strong>Passport Photo:</strong></p>
-<input type="file" accept="image/*" id="passportInput" required>
+    <h2 class="section-title">
+      Declare Interest
+    </h2>
 
-<img id="previewImage" style="
-  width:120px;
-  height:120px;
-  object-fit:cover;
-  border:3px solid #1f8ec2;
-  margin-top:10px;
-">
-  
-        <p><strong>Full Name:</strong></p>
-        <input type="text" required>
-  
-        <p><strong>Phone Number:</strong></p>
-        <input type="text" required>
-  
-        <p><strong>Year of Induction:</strong></p>
-        <input type="text" required>
-  
-        <p><strong>Office Sought:</strong></p>
-        <select required>
-          <option value="">Select Position</option>
-          <option>President</option>
-          <option>Vice President</option>
-          <option>Secretary</option>
-          <option>Treasurer</option>
-          <option>PRO</option>
-          <option>Financial Secretary</option>
-          <option>Welfare I</option>
-          <option>Welfare II</option>
+    <div class="form-document">
+
+      <p>
+        <strong>DECLARATION OF INTEREST FORM</strong>
+      </p>
+
+      <p>
+        Please complete this form carefully with accurate information.
+      </p>
+
+      <br>
+
+      <form id="interestForm">
+
+        <!-- PASSPORT PHOTO -->
+
+        <p>
+          <strong>Passport Photo:</strong>
+        </p>
+
+        <input
+          type="file"
+          accept="image/*"
+          id="passportInput"
+          required
+        >
+
+        <img
+          id="previewImage"
+          alt="Passport preview"
+          style="
+            width:120px;
+            height:120px;
+            object-fit:cover;
+            border:3px solid #1f8ec2;
+            margin-top:10px;
+          "
+        >
+
+
+        <!-- FULL NAME -->
+
+        <p>
+          <strong>Full Name:</strong>
+        </p>
+
+        <input
+          type="text"
+          id="candidateName"
+          required
+        >
+
+
+        <!-- PHONE -->
+
+        <p>
+          <strong>Phone Number:</strong>
+        </p>
+
+        <input
+          type="tel"
+          id="candidatePhone"
+          required
+        >
+
+
+        <!-- YEAR -->
+
+        <p>
+          <strong>YEAR OF INDUCTION:</strong>
+        </p>
+
+        <input
+          type="text"
+          id="inductionYear"
+          required
+        >
+
+
+        <!-- POSITION -->
+
+        <p>
+          <strong>Office Sought:</strong>
+        </p>
+
+        <select
+          id="positionSought"
+          required
+        >
+
+          <option value="">
+            Select Position
+          </option>
+
+          <option value="Chairman">
+            Chairman
+          </option>
+
+          <option value="Vice Chairman">
+            Vice Chairman
+          </option>
+
+          <option value="Secretary">
+            Secretary
+          </option>
+
+          <option value="Assistant Secretary">
+            Assistant Secretary
+          </option>
+
+          <option value="Financial Secretary">
+            Financial Secretary
+          </option>
+
+          <option value="Treasurer">
+            Treasurer
+          </option>
+
+          <option value="Public Relations Officer (PRO)">
+            Public Relations Officer (PRO)
+          </option>
+
+          <option value="Welfare Officer">
+            Welfare Officer
+          </option>
+
+          <option value="Director of Sports and Socials">
+            Director of Sports and Socials
+          </option>
+
+          <option value="Director of Spirituality">
+            Director of Spirituality
+          </option>
+
         </select>
-  
-        <p><strong>Are you an active member?</strong></p>
-        <select required>
-          <option value="">Select</option>
-          <option>Yes</option>
-          <option>No</option>
+
+
+        <!-- ACTIVE MEMBER -->
+
+        <p>
+          <strong>Are you an active member?</strong>
+        </p>
+
+        <select
+          id="activeMember"
+          required
+        >
+
+          <option value="">
+            Select
+          </option>
+
+          <option value="Yes">
+            Yes
+          </option>
+
+          <option value="No">
+            No
+          </option>
+
         </select>
-  
-        <p><strong>Do you meet eligibility requirements?</strong></p>
-        <select required>
-          <option value="">Select</option>
-          <option>Yes</option>
-          <option>No</option>
+
+
+        <!-- ELIGIBILITY -->
+
+        <p>
+          <strong>Do you meet eligibility requirements?</strong>
+        </p>
+
+        <select
+          id="eligibility"
+          required
+        >
+
+          <option value="">
+            Select
+          </option>
+
+          <option value="Yes">
+            Yes
+          </option>
+
+          <option value="No">
+            No
+          </option>
+
         </select>
-  
-        <p><strong>Manifesto:</strong></p>
-        <textarea rows="5" required></textarea>
-  
+
+
+        <!-- MANIFESTO -->
+
+        <p>
+          <strong>Manifesto:</strong>
+        </p>
+
+        <textarea
+          id="manifesto"
+          rows="5"
+          required
+        ></textarea>
+
+
         <br><br>
-  
-        <p><strong>DECLARATION</strong></p>
+
+
+        <!-- DECLARATION -->
+
+        <p>
+          <strong>DECLARATION</strong>
+        </p>
+
         <p>
           I confirm that the information provided is true and correct.
         </p>
-  
-        <p><strong>Signature:</strong></p>
-<input type="text" placeholder="Type your full name as signature" required>
-  
-        <p><strong>Date:</strong></p>
-        <input type="date" required>
-  
+
+
+        <!-- SIGNATURE -->
+
+        <p>
+          <strong>Signature:</strong>
+        </p>
+
+        <input
+          type="text"
+          id="signature"
+          placeholder="Type your full name as signature"
+          required
+        >
+
+
+        <!-- DATE -->
+
+        <p>
+          <strong>Date:</strong>
+        </p>
+
+        <input
+          type="date"
+          id="declarationDate"
+          required
+        >
+
+
         <br><br>
-  
-        <button type="submit" class="view">Submit Application</button>
-  
+
+        <button
+          type="submit"
+          class="view"
+        >
+          Submit Application
+        </button>
+
       </form>
-  
+
     </div>
-  
+
   </section>
-  <!-- FOOTER -->
+
+
+  <!-- ================= FOOTER ================= -->
+
   <footer class="footer">
-    <p>© 2026 CASAN Old Boys Association</p>
+
+    <p>
+      © 2026 CASAN Old Boys Association
+    </p>
+
   </footer>
 
+
+  <!-- ================= jsPDF ================= -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script type="module" src="election.js"></script>
+
+
+  <!-- ================= FIREBASE / ELECTION JAVASCRIPT ================= -->
+
+  <script
+    type="module"
+    src="election.js"
+  ></script>
 
 </body>
+
 </html>

@@ -1,305 +1,880 @@
+/* =========================
+   GLOBAL
+========================= */
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  margin: 0;
   background: #f4f4f4;
+  color: #222;
 }
-/* HEADER BASE */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
 .header {
-    background-color: #1f8ec2;
-    color: white;
-    padding: 15px 20px;
-    margin-bottom: 1px;
-   
-  }
-  
-  /* FLEX LAYOUT */
-  .header-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* makes it responsive */
-    gap: 15px;
-  }
-  
-  /* LOGO */
-  .logo {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-  }
-  
-  /* TITLE SECTION */
-  .header-container h1 {
-    font-size: 20px;
-    margin: 0;
-  }
-  .oldboys{
-    margin-right: 100px;
-
-  }
-  .tagline {
-    font-size: 13px;
-    color: #cbd5e1;
-    margin: 2px 0 0 0;
-  }
-  
-  /* NAVIGATION */
-  .nav {
-    display: flex;
-    gap: 15px;
-    margin-right: 160px;
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.2s;
-  }
-  
-  .nav a:hover {
-    color: #38bdf8;
-  }
-  
-  /* SEARCH BAR */
-  .header input[type="text"] {
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: none;
-    outline: none;
-    width: 90%;
-  }
-  .search-box{
-    margin-left: 160px;
-    justify-content: center;
-    display: flex;
-    padding: 10px;
-  }
-  .look{
-    background-color: white;
-    color: 1f8ec2;
-    padding: 0.3rem;
-    border-radius: 5px;
-    margin-left: 2px;
-  }
-  .meeting-banner {
-    background: #1f8ec2;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-size: 14px;
-  }
-  
-  .meeting-banner small {
-    color: #e0f2fe;
-  }
-  .hero {
-    min-height: 100vh; 
-    background-image: url("img/church.jpeg");
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-  
-    position: relative;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 0;
-  }
-  .hero h2 p{
-    font-style: italic;
-  }
-  .hero p{
-    font-family: 'Playfair Display', serif;
-  }
-.hero h2,
-.hero p {
-  position: relative;
-  z-index: 2;
-}
-.hero button{
-  position: relative;
-  z-index: 2;
-}
-.section-title {
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #1f8ec2;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  padding: 10px;
-}
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-.view{
   background-color: #1f8ec2;
   color: white;
-  padding: 0.5rem;
-  border-radius: 5px;
+  padding: 15px 20px;
+  margin-bottom: 1px;
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* LOGO */
+
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* TITLE */
+
+.oldboys {
+  margin-right: 40px;
+}
+
+.header-container h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #e0f2fe;
+  margin: 2px 0 0;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  color: #dff6ff;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+  margin-left: auto;
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+}
+
+.header input[type="text"] {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.look {
+  background-color: white;
+  color: #1f8ec2;
+  padding: 0.4rem;
+  border-radius: 5px;
+  margin-left: 2px;
+}
+
+
+/* =========================
+   MEETING BANNER
+========================= */
+
+.meeting-banner {
+  background: #1f8ec2;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.meeting-banner small {
+  color: #e0f2fe;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+
+  background-image: url("img/church.jpeg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+
+  padding: 20px;
+
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+.hero .slogan {
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 10px;
+
+  padding: 15px 20px;
+
+  min-width: 90px;
+
+  backdrop-filter: blur(5px);
+}
+
+.time-box h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.time-box span {
+  font-size: 12px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.view {
+  display: inline-block;
+
+  background-color: #1f8ec2;
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 6px;
+
+  border: none;
+
+  text-decoration: none;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.view:hover {
+  background-color: #176f99;
+  transform: translateY(-2px);
+}
+
+button.view {
+  cursor: pointer;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  font-weight: bold;
+
+  color: #1f8ec2;
+
+  font-size: 28px;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+
+  padding: 10px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
 .card {
   background: white;
+
   border-radius: 10px;
-  padding: 5px;
-  margin: 10px;
+
+  padding: 20px;
+
+  margin: 5px;
+
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  transition: 0.3s ease;
 }
-.card img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(31, 142, 194, 0.6),
-              0 0 30px rgba(31, 142, 194, 0.3);
+
+.card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
+
+.card h3 {
+  color: #1f8ec2;
+}
+
+.card p {
+  color: #333;
+}
+
+
+/* =========================
+   CARD IMAGES
+========================= */
+
 .card img {
   width: 150px;
   height: 150px;
+
   border-radius: 12px;
+
   object-fit: cover;
 
   object-position: center 30%;
 
   border: 4px solid #1f8ec2;
+
   padding: 3px;
+
   background: white;
 
   transition: 0.3s ease;
 }
+
+.card img:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 15px rgba(31, 142, 194, 0.6),
+    0 0 30px rgba(31, 142, 194, 0.3);
+}
+
 .card img.wide-img {
-  object-fit: contain;   /* shows full image */
-  border-radius: 12px;   /* not a circle */
+  object-fit: contain;
+
+  border-radius: 12px;
+
   height: 150px;
+
   background: #f4f4f4;
+
   padding: 5px;
 }
-.card p{
-  color: black;
+
+
+/* =========================
+   CANDIDATE BOARD
+========================= */
+
+#candidateGrid {
+  margin-top: 25px;
 }
+
+#candidateGrid .card {
+  padding: 20px;
+}
+
+
+/* =========================
+   VOTING SECTION
+========================= */
+
+.voting-section {
+  max-width: 1000px;
+}
+
+.vote-intro {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 30px;
+
+  color: #555 !important;
+
+  font-family: 'Poppins', sans-serif !important;
+}
+
+
+/* =========================
+   VOTING CARDS
+========================= */
+
+.voting-card {
+  background: white;
+
+  max-width: 700px;
+
+  margin: 25px auto;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+
+  border-top: 4px solid #1f8ec2;
+}
+
+.voting-card h3 {
+  text-align: center;
+
+  color: #1f8ec2;
+
+  margin-top: 0;
+}
+
+.voting-card > p {
+  color: #555;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================
+   VOTING FORMS
+========================= */
+
+.voting-card form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.voting-card label {
+  font-weight: 500;
+
+  color: #333;
+
+  margin-top: 10px;
+}
+
+.voting-card input[type="tel"],
+.voting-card input[type="text"] {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 7px;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.voting-card input:focus {
+  border-color: #1f8ec2;
+
+  box-shadow: 0 0 0 2px rgba(31, 142, 194, 0.1);
+}
+
+
+/* =========================
+   RECAPTCHA
+========================= */
+
+#recaptcha-container {
+  margin: 10px 0;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+/* =========================
+   FORM MESSAGES
+========================= */
+
+.form-message {
+  text-align: center;
+
+  margin-top: 15px;
+
+  font-size: 14px;
+
+  color: #555 !important;
+}
+
+
+/* =========================
+   BALLOT
+========================= */
+
+.ballot {
+  max-width: 850px;
+}
+
+.ballot > h3 {
+  font-size: 24px;
+}
+
+.ballot > p {
+  text-align: center;
+}
+
+
+/* =========================
+   POSITION VOTING
+========================= */
+
+.position-vote {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  margin: 20px 0;
+}
+
+.position-vote h4 {
+  color: #1f8ec2;
+
+  font-size: 19px;
+
+  margin-top: 0;
+
+  margin-bottom: 15px;
+
+  border-bottom: 1px solid #ddd;
+
+  padding-bottom: 10px;
+}
+
+
+/* =========================
+   CANDIDATE OPTIONS
+========================= */
+
+.candidate-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: white;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  padding: 12px;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.candidate-option:hover {
+  border-color: #1f8ec2;
+
+  background: #f0f9ff;
+}
+
+.candidate-option input[type="radio"] {
+  width: 18px;
+
+  height: 18px;
+
+  accent-color: #1f8ec2;
+}
+
+.candidate-option img {
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 2px solid #1f8ec2;
+}
+
+.candidate-option span {
+  font-weight: 500;
+
+  color: #222;
+}
+
+
+/* =========================
+   SUBMIT VOTE
+========================= */
+
+.vote-submit {
+  text-align: center;
+
+  margin-top: 30px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #ddd;
+}
+
+.vote-submit p {
+  color: #555 !important;
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+#submitVote {
+  font-size: 16px;
+
+  padding: 12px 25px;
+}
+
+
+/* =========================
+   ALREADY VOTED / SUCCESS
+========================= */
+
+#alreadyVoted,
+#voteSuccess {
+  text-align: center;
+}
+
+#alreadyVoted h3 {
+  color: #1f8ec2;
+}
+
+#voteSuccess h3 {
+  color: #1f8ec2;
+}
+
+
+/* =========================
+   DECLARE INTEREST FORM
+========================= */
+
+.form-document {
+  background: white;
+
+  max-width: 800px;
+
+  margin: auto;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-document p {
+  color: #333;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-document form {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.form-document input,
+.form-document select,
+.form-document textarea {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 6px;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 14px;
+
+  margin-bottom: 10px;
+
+  outline: none;
+}
+
+.form-document input:focus,
+.form-document select:focus,
+.form-document textarea:focus {
+  border-color: #1f8ec2;
+
+  box-shadow: 0 0 0 2px rgba(31, 142, 194, 0.1);
+}
+
+.form-document textarea {
+  resize: vertical;
+}
+
+
+/* =========================
+   PASSPORT PREVIEW
+========================= */
+
+#previewImage {
+  width: 120px;
+
+  height: 120px;
+
+  object-fit: cover;
+
+  border: 3px solid #1f8ec2;
+
+  margin-top: 5px;
+
+  border-radius: 8px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
 
 .gallery {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 15px;
-  padding: 10px;;
+
+  padding: 10px;
 }
 
 #gallery h2 {
   text-align: center !important;
+
   font-size: 28px;
+
   color: #1f8ec2;
+
   margin-bottom: 10px;
+
   letter-spacing: 1px;
 }
+
 #gallery .slogan {
   font-size: 14px;
+
   color: #555;
+
   font-style: italic;
+
   margin-bottom: 25px;
+
   padding: 0 10px;
 }
 
-
-.gallery img {
-  width: 100%;
-  height: 700px;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-#gallery .slogan {
-  text-align: center;
-  font-size: 15px;
-  color: #555;
-  font-style: italic;
-  margin-bottom: 20px;
-  padding: 0 15px;
-}
 .gallery-item {
   transition: 0.3s;
-  padding: 10px;
-  margin: 0;   /* REMOVE this */
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  
 
+  padding: 10px;
+
+  margin: 0;
+
+  text-align: center;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  border-radius: 10px;
 }
-.gallery-item p{
-  color: #1f8ec2;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-}
+
 .gallery-item:hover {
   transform: scale(1.03);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+.gallery-item p {
+  color: #1f8ec2;
+
+  transition: 0.3s ease;
+}
+
 .gallery img {
   width: 100%;
+
   height: auto;
+
   border-radius: 10px;
+
   display: block;
 }
 
-/* ONLY NORMAL VIDEOS (NOT TIKTOK STYLE) */
+
+/* =========================
+   VIDEOS
+========================= */
+
 .gallery video:not(.tiktok-video) {
   width: 100%;
+
   height: auto;
+
   border-radius: 10px;
+
   display: block;
 }
 
-/* TIKTOK STYLE VIDEO */
 .tiktok-video {
   width: 100%;
-  height: 70vh;   /* 🔥 takes 70% of screen height */
+
+  height: 70vh;
+
   object-fit: cover;
+
   display: block;
+
   background: black;
+
   border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
+
+/* =========================
+   ABOUT
+========================= */
 
 #about {
   background-color: #1f8ec2;
+
   color: white;
+
   padding: 30px 20px;
+
   width: 100%;
+
   text-align: center;
 }
 
@@ -307,105 +882,270 @@ body {
   margin-bottom: 15px;
 }
 
-#about p, p{
+#about p {
   line-height: 1.6;
+
   color: white;
+
   margin-bottom: 15px;
 }
+
+
+/* =========================
+   NOTICE
+========================= */
+
 .notice {
   text-align: center;
+
   margin-top: 150px;
+
   color: #555;
+
   font-style: italic;
 }
-.updated{
-  text-align:center;
-  margin-top:20px;
+
+.updated {
+  text-align: center;
+
+  margin-top: 20px;
+
   color: #1f8ec2;
 }
-.slogan {
-  font-style: italic;
-  color: #1a1a2e;
-  font-weight: bold;
-}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
   background-color: #1f8ec2;
-  color: #cbd5e1;
+
+  color: #e0f2fe;
+
   text-align: center;
+
   padding: 25px;
+
   margin-top: 1px;
+
   font-size: 14px;
+
   width: 100%;
 }
+
+.footer p {
+  color: #e0f2fe;
+}
+
+
+/* =========================
+   RESPONSIVE — TABLET
+========================= */
+
 @media (max-width: 900px) {
-  .members {
+
+  .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
-@media (max-width: 600px) {
-  .members {
-    grid-template-columns: 1fr;
-  }
-}
-  /* MOBILE RESPONSIVE */
- /* ===== MOBILE FIXES ===== */
+
+/* =========================
+   RESPONSIVE — MOBILE
+========================= */
+
 @media (max-width: 768px) {
 
-  /* HEADER STACKING */
+  /* HEADER */
+
   .header-container {
     flex-direction: column;
+
     align-items: center;
+
     text-align: center;
+
     gap: 10px;
   }
 
-  /* NAV WRAP NICELY */
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 0; /* override your desktop spacing */
+  .oldboys {
+    margin-right: 0;
   }
 
-  /* SEARCH BOX FULL WIDTH */
+  .header-container h1 {
+    font-size: 18px;
+  }
+
+  .nav {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-right: 0;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+
+  /* SEARCH */
+
   .search-box {
     margin-left: 0;
+
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   .header input[type="text"] {
     width: 90%;
   }
 
-  /* REMOVE BIG SPACING ON MOBILE */
-  .oldboys {
-    margin-right: 0;
-  }
 
-  /* HERO TEXT SCALE */
+  /* HERO */
+
   .hero {
-    height: 220px;
-    padding: 10px;
+    min-height: 80vh;
+
+    padding: 20px 15px;
   }
 
   .hero h2 {
-    font-size: 18px;
+    font-size: 28px;
   }
 
   .hero p {
     font-size: 14px;
   }
 
-  /* MEMBERS GRID */
-  .members {
+
+  /* COUNTDOWN */
+
+  .countdown {
+    gap: 8px;
+  }
+
+  .time-box {
+    min-width: 65px;
+
+    padding: 10px;
+  }
+
+  .time-box h3 {
+    font-size: 22px;
+  }
+
+
+  /* GRID */
+
+  .grid {
+    grid-template-columns: 1fr;
+
+    padding: 5px;
+  }
+
+  .gallery {
     grid-template-columns: 1fr;
   }
 
-  /* CARD IMAGE SMALLER */
+
+  /* SECTION */
+
+  .section {
+    padding: 45px 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+
+  /* VOTING */
+
+  .voting-card {
+    padding: 20px 15px;
+
+    margin: 20px 0;
+  }
+
+  .position-vote {
+    padding: 15px;
+  }
+
+  .candidate-option {
+    padding: 10px;
+  }
+
+  .candidate-option img {
+    width: 45px;
+
+    height: 45px;
+  }
+
+
+  /* FORM */
+
+  .form-document {
+    padding: 20px 15px;
+  }
+
+
+  /* CARD IMAGES */
+
   .card img {
-    width: 80px;
+    width: 100px;
+
     height: 120px;
   }
+
+
+  /* TIKTOK VIDEO */
+
+  .tiktok-video {
+    height: 60vh;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .time-box {
+    min-width: 58px;
+
+    padding: 8px;
+  }
+
+  .time-box h3 {
+    font-size: 19px;
+  }
+
+  .time-box span {
+    font-size: 10px;
+  }
+
+  .voting-card {
+    padding: 18px 12px;
+  }
+
+  .candidate-option span {
+    font-size: 13px;
+  }
+
 }
