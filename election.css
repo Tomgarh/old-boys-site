@@ -1326,3 +1326,18 @@ img {
   }
 
 }
+.registration-notice {
+  text-align: center;
+  font-weight: 500;
+  margin: 10px auto 12px;
+}
+
+.register-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 25px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
